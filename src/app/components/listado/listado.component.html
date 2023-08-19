@@ -1,0 +1,35 @@
+<div class="overflow-x-auto p-4 border border-gray-300 rounded-lg">
+  <div>
+    <h1 class="text-3xl m-4 p-2">Listado de reportes registrados</h1>
+  </div>
+    <table class="table table-xs">
+      <thead>
+        <tr>
+          <th>ID</th> 
+          <th>Rescatista</th> 
+          <th>Correo de rescatista</th> 
+          <th>Celular de rescatista</th> 
+          <th>Descripción de rescate</th> 
+        </tr>
+      </thead> 
+      <tbody>
+        <tr>
+          <tr *ngFor="let rescate of datos">
+            <th>{{ rescate.idrescate }}</th>
+            <th>{{ rescate.nombreDeRescatista }} {{rescate.apellidoDeRescatista}}</th>
+            <th>{{ rescate.correoDeRescatista }}</th>
+            <th>{{ rescate.celularDeRescatista }}</th>
+            <th>{{ rescate.descripcionRescate }}</th>
+        </tr>
+      </tbody> 
+      <tfoot>
+        <tr>
+          <th>ID</th> 
+          <th>Rescatista</th> 
+          <th>Correo de rescatista</th> 
+          <th>Celular de rescatista</th> 
+          <th>Descripción de rescate</th> 
+        </tr>
+      </tfoot>
+    </table>
+  </div>
